@@ -12,7 +12,7 @@
 
 	<groupId>com.github</groupId>
 	<artifactId>Zozmeq-vicgif-7musqi</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>Zozmeq-vicgif-7musqi</name>
 	<description>Zozmeq-vicgif-7musqi</description>
 
@@ -56,10 +56,15 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
-			<name>GitHub moreiracruz Apache Maven Packages</name>
+			<id>github-releases</id>
+			<name>GitHub moreiracruz Apache Maven Releases</name>
 			<url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
 		</repository>
+		<snapshotRepository>
+			<id>github-snapshots</id>
+			<name>GitHub moreiracruz Apache Maven Snapshots</name>
+			<url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
