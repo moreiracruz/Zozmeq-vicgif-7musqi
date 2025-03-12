@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.3</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.github</groupId>
+	<artifactId>Zozmeq-vicgif-7musqi</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Zozmeq-vicgif-7musqi</name>
+	<description>Zozmeq-vicgif-7musqi</description>
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<url>https://github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Paulo André Moreira Cruz</name>
+			<email>pawloandre@icloud.com</email>
+			<url>https://www.moreiracruz.com.br</url>
+			<organization>Moreira Cruz</organization>
+			<organizationUrl>https://www.moreiracruz.com.br</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>-3</timezone>
+			<properties>
+				<phone>+55 (83) 99637-7548</phone>
+			</properties>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/moreiracruz/Zozmeq-vicgif-7musqi.git</connection>
+		<developerConnection>scm:git:https://github.com/moreiracruz/Zozmeq-vicgif-7musqi.git</developerConnection>
+		<tag>v0.0.1</tag>
+		<url>https://github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub moreiracruz Apache Maven Packages</name>
+		</repository>
+		<snapshotRepository>
+			<id>github</id>
+			<name>GitHub moreiracruz Apache Maven Snapshots</name>
+			<url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<useReleaseProfile>false</useReleaseProfile>
+					<releaseProfiles>release</releaseProfiles>
+					<goals>deploy</goals>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>2.1.0</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>3.2.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>
