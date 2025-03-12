@@ -73,6 +73,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>net.bytebuddy</groupId>
+			<artifactId>byte-buddy-agent</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -119,6 +124,22 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<argLine>
+								-javaagent:"${settings.localRepository}/net/bytebuddy/byte-buddy-agent/${byte-buddy-agent.version}/byte-buddy-agent-${byte-buddy-agent.version}.jar"
+							</argLine>
+							<dependencies>
+								<dependency>
+									<groupId>net.bytebuddy</groupId>
+									<artifactId>byte-buddy-agent</artifactId>
+									<version>${byte-buddy-agent.version}</version>
+								</dependency>
+							</dependencies>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
