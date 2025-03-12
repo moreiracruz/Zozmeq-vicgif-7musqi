@@ -30,7 +30,7 @@
         <server>
             <id>github</id>
             <username>${env.GITHUB_ACTOR}</username>
-            <password>${env.XUMSOF_JYWQYK_7JIQVU_KEY}</password>
+            <password>${env.ZOZMEQ_VICGIF_7MUSQI_KEY}</password>
         </server>
     </servers>
 
