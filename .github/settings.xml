@@ -16,11 +16,12 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>github</id>
-                    <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
+                    <id>github-releases</id>
+                    <url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
+                </repository>
+                <repository>
+                    <id>github-snapshots</id>
+                    <url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
                 </repository>
             </repositories>
         </profile>

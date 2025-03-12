@@ -56,11 +56,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
-			<name>GitHub moreiracruz Apache Maven Packages</name>
+			<id>github-releases</id>
+			<name>GitHub moreiracruz Apache Maven Releases</name>
+			<url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
 		</repository>
 		<snapshotRepository>
-			<id>github</id>
+			<id>github-snapshots</id>
 			<name>GitHub moreiracruz Apache Maven Snapshots</name>
 			<url>https://maven.pkg.github.com/moreiracruz/Zozmeq-vicgif-7musqi</url>
 		</snapshotRepository>
